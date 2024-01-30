@@ -23,6 +23,17 @@ document.getElementById("addNumbers").addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
+function subtract(number1, number2) {
+    if (isNaN(number1) || isNaN(number2)) {
+        console.log(`${number1} and ${number2} must be numbers`);
+    } else {
+        return number1 - number2;
+    }
+
+}
+
+
+
 let subtractNumbers = function () {
     let sub1 = Number(document.getElementById("subtract1").value);
     let sub2 = Number(document.getElementById("subtract2").value);
@@ -85,13 +96,19 @@ document.getElementById("getTotal").addEventListener("click", () => {
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+document.getElementById("array").innerHTML = arrayNumbers;
 
 /* Output Odds Only Array */
+document.getElementById("odds").innerHTML = arrayNumbers.filter((number) => number % 2 != 0);
 
 /* Output Evens Only Array */
-
+document.getElementById("evens").innerHTML = arrayNumbers.filter((number) => number % 2 == 0)
 /* Output Sum of Org. Array */
 
+document.getElementById("sumOfArray").innerHTML =arrayNumbers.reduce((sum, number) => sum + number);
 /* Output Multiplied by 2 Array */
+document.getElementById("multiplied").innerHTML = arrayNumbers.map((number) => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
+document.getElementById("sumOfMultiplied").innerHTML = arrayNumbers.map((number) => number * 2).reduce((sum, value) => sum + value, 0);

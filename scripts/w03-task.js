@@ -66,14 +66,19 @@ let divideNumbers = function () {
 document.getElementById("divideNumbers").addEventListener("click", divideNumbers);
 
 /* Decision Structure */
-document.getElementById("getTotal").addEventListener("click", (e) => {
-    let number = Number(document.getElementById("subtotal").value);
+
+
+document.getElementById("getTotal").addEventListener("click", () => {
+    let number = parseFloat(document.getElementById("subtotal").value);
     let membership = document.getElementById("member").checked;
+
     if (membership) {
-    
-} else {
-    
-}
+        document.getElementById("total").innerHTML = (number - (number * 0.2)).toFixed(2);
+        console.log(parseFloat((number - (number * 0.2))).toFixed(2))
+    } else {
+        document.getElementById("total").innerHTML = number.toFixed(2);
+        console.log(parseFloat(number).toFixed(2));
+    }
 
 });
 

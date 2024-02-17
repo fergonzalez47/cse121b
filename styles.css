@@ -45,7 +45,7 @@ body {
 .card-country {
     margin: 1em;
     width: 250px;
-    height: 350px;
+    height: 400px;
     background-image: linear-gradient(163deg, #00ffff 0%, #3700ff 100%);
     border-radius: 20px;
     transition: all .3s;
@@ -53,7 +53,7 @@ body {
 
 .card-inner {
     width: 250px;
-    height: 350px;
+    height: 400px;
     color: rgba(255, 255, 255, 0.712);
     background-color: #02052c;
     border-radius: 20px;
